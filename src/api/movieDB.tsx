@@ -1,12 +1,12 @@
-import axios from 'axios';
-import React from 'react'
-
+import React from "react";
+import axios from "axios";
 
 const movieDB = axios.create({
-  baseURL:'https://api.themoviedb.org/3/movie',
-  params:{
-    api_key:'84197f7efd0ae21a39764664d2d761cf',
-    language:'es-ES'
-  }
-})
+    baseURL: 'https://api.themoviedb.org/3/movie',
+    params: {
+        api_key: '32b521f8aaac24370d0df9cacb7a9e03',
+        language: 'es-ES'
+    }
+});
+
 export default movieDB;

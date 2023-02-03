@@ -1,6 +1,6 @@
 import React from 'react'
 import { FlatList, View ,Text} from 'react-native';
-import { Movie } from '../Interfaces/MoveInterfaces';
+import { Movie } from '../Interfaces/movieInterface';
 import { MoviePoster } from './MoviePoster';
 interface Props{
     movies:Movie[];
@@ -8,8 +8,12 @@ interface Props{
 }
 export const HorizontalSlider = ({movies,title}:Props) => {
   return (
-    <View style={{backgroundColor:'red',height:250}}>
-        <Text style={{fontSize:30,fontWeight:'bold'}}>{title}</Text>
+    <View style={{backgroundColor:'white',height:250}}>
+      {
+        title && <Text style={{fontSize:30,fontWeight:'bold'}}>{title}</Text>
+
+      }
+        {/* <Text style={{fontSize:30,fontWeight:'bold'}}>{title}</Text> */}
         <FlatList
           data={movies}
           renderItem={({item}:any)=> (
